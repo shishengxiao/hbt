@@ -3,18 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-// 导入ElementUI
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css';
+//引入element组件
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
-//引入moment
-import moment from 'moment'//导入文件
-
-// createApp(App).use(store).use(router).mount('#app')
-var app= createApp(App);
+const app = createApp(App)
 app.use(store).use(router).mount('#app')
 
-//全局组件ElementUI
-app.use(ElementUI)
-app.use(moment)
-moment.locale('zh-cn');//需要汉化
+app.use(ElementPlus)
